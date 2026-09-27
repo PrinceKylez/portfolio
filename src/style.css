@@ -3,7 +3,7 @@
 :root {
   font-family: "Courier New", Courier, monospace;
   color: #e8e8e8;
-  background: #17191d;
+  background: #07111f;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -16,7 +16,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #17191d;
+  background: #07111f;
 }
 
 button, a {
@@ -25,6 +25,10 @@ button, a {
 
 .site {
   min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(45, 91, 145, 0.18), transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(30, 70, 125, 0.16), transparent 25%),
+    #07111f;
 }
 
 .intro {
