@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const showAchievements = ref(false)
 const showLinks = ref(false)
 
 const skills = ['C', 'C++', 'Java', 'Python', 'Django', 'SQL', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'Git & GitHub']
@@ -65,7 +64,6 @@ const projects = [
         <h2>Click Something 👀</h2>
         <p>There might be some things hidden here.</p>
         <div class="buttons">
-          <button @click="showAchievements = true">🏆 Achievements</button>
           <button @click="showLinks = true">🔗 My Links</button>
         </div>
       </section>
@@ -76,33 +74,19 @@ const projects = [
       <p>Made with Vue 3, TypeScript & Tailwind CSS</p>
     </footer>
 
-    <Transition name="fade">
-      <div v-if="showAchievements" class="overlay" @click.self="showAchievements = false">
-        <div class="popup">
-          <button class="close" @click="showAchievements = false">×</button>
-          <h2>🏆 Achievements</h2>
-          <ul>
-            <li>Computer Engineering student</li>
-            <li>Hands-on Django & PostgreSQL experience</li>
-            <li>Database and SQL project experience</li>
-            <li>OJT technical support experience</li>
-          </ul>
-        </div>
+    <div v-if="showLinks" class="overlay" @click.self="showLinks = false">
+      <div class="popup">
+        <button class="close" @click="showLinks = false">×</button>
+        <h2>🔗 My Links</h2>
+        <ul>
+          <li><a href="https://github.com/PrinceKylez" target="_blank">GitHub — PrinceKylez</a></li>
+          <li><a href="mailto:kylequintos002@gmail.com">Email — kylequintos002@gmail.com</a></li>
+          <li><a href="https://github.com/PrinceKylez/portfolio" target="_blank">Portfolio Repository</a></li>
+          <li><a href="https://www.facebook.com/itzur.prxnc/" target="_blank">Facebook — itzur.prxnc</a></li>
+          <li><a href="https://www.instagram.com/lost.pryncc/" target="_blank">Instagram — lost.pryncc</a></li>
+          <li><a href="https://steamcommunity.com/id/HaiseKing/" target="_blank">Steam — HaiseKing</a></li>
+        </ul>
       </div>
-    </Transition>
-
-    <Transition name="fade">
-      <div v-if="showLinks" class="overlay" @click.self="showLinks = false">
-        <div class="popup">
-          <button class="close" @click="showLinks = false">×</button>
-          <h2>🔗 My Links</h2>
-          <ul>
-            <li><a href="https://github.com/PrinceKylez" target="_blank">GitHub — PrinceKylez</a></li>
-            <li><a href="mailto:kylequintos002@gmail.com">Email — kylequintos002@gmail.com</a></li>
-            <li><a href="https://github.com/PrinceKylez/portfolio" target="_blank">Portfolio Repository</a></li>
-          </ul>
-        </div>
-      </div>
-    </Transition>
+    </div>
   </div>
 </template>
