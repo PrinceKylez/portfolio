@@ -35,8 +35,7 @@ const projects = [
     <main class="contents">
       <section class="card">
         <h2>About Me</h2>
-        <p>I am a Computer Engineering student from CSU Carig who enjoys learning programming and building useful systems.</p>
-        <p>I am interested in software development, databases, web development, and electronics. Most of what I know comes from school projects and hands-on practice.</p>
+        <p>Just a random dude tryna code, survive college, and somehow make things work. 💻</p>
       </section>
 
       <section class="card">
