@@ -19,7 +19,7 @@ const projects = [
 <template>
   <div class="site-shell min-h-screen antialiased">
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="Prince Kyle Quintos home"><span class="brand-mark">pk<span>.</span></span><span class="brand-caption">PORTFOLIO / 2026</span></a>
+      <a class="brand" href="#home" aria-label="Prince Kyle Quintos home"><img class="brand-logo" src="/prince-logo.png" alt="" /><span class="brand-caption">PORTFOLIO / 2026</span></a>
       <nav aria-label="Main navigation">
         <a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a>
       </nav>
@@ -71,7 +71,7 @@ const projects = [
       <section class="contact-section"><div class="page-width contact-inner"><p class="eyebrow"><span class="eyebrow-line"></span> CONTACT</p><h2>Want to get<br />in touch<span>?</span></h2><button class="button button-light" @click="showLinks = true">My links <span>↗</span></button></div></section>
     </main>
 
-    <footer class="footer page-width"><a class="brand" href="#home"><span class="brand-mark">pk<span>.</span></span></a><span>© 2026 Prince Kyle Quintos</span><span>VUE 3 · TAILWIND CSS · TYPESCRIPT</span><button class="back-top" @click="scrollToTop">BACK TO TOP ↑</button></footer>
+    <footer class="footer page-width"><a class="brand" href="#home" aria-label="Back to top"><img class="brand-logo" src="/prince-logo.png" alt="" /></a><span>© 2026 Prince Kyle Quintos</span><span>VUE 3 · TAILWIND CSS · TYPESCRIPT</span><button class="back-top" @click="scrollToTop">BACK TO TOP ↑</button></footer>
 
     <div v-if="showLinks" class="modal-backdrop" @click.self="showLinks = false" @keydown.esc="showLinks = false">
       <section class="links-modal" role="dialog" aria-modal="true" aria-labelledby="links-title">
