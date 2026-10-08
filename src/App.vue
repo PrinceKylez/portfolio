@@ -40,6 +40,10 @@ const projects = [
         <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
       </section>
 
+      <section class="aura-divider" aria-label="Animated rose energy divider">
+        <img src="/halo-shimmer.gif" alt="" aria-hidden="true" />
+      </section>
+
       <section id="work" class="work-section section-pad">
         <div class="page-width">
           <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> COURSEWORK & SIDE PROJECTS</p><h2>My <span>projects</span></h2></div><p class="section-aside">Class assignments, research,<br />and practice projects.</p></div>
