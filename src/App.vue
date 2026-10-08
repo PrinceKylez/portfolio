@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { siFacebook, siGithub, siInstagram, siSteam } from 'simple-icons'
 
 const showLinks = ref(false)
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -75,7 +76,7 @@ const projects = [
         <h2 id="links-title">Find me <span>around.</span></h2>
         <p class="modal-intro">Always happy to connect, talk projects, or swap ideas.</p>
         <a href="https://github.com/PrinceKylez" target="_blank" rel="noreferrer">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.77 2.49 3.75 1.77.1-.71.39-1.2.7-1.48-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.51.4.35.75 1.03.75 2.08v3.11c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          <svg class="social-icon social-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path :d="siGithub.path" /></svg>
           GitHub <span>@PrinceKylez</span><b>↗</b>
         </a>
         <a href="mailto:kylequintos002@gmail.com">
@@ -83,15 +84,15 @@ const projects = [
           Email <span>kylequintos002@gmail.com</span><b>↗</b>
         </a>
         <a href="https://www.facebook.com/itzur.prxnc/" target="_blank" rel="noreferrer">
-          <svg class="social-icon social-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.6v2H6.8v3.2h2.9V21h3.7Z"/></svg>
+          <svg class="social-icon social-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path :d="siFacebook.path" /></svg>
           Facebook <span>itzur.prxnc</span><b>↗</b>
         </a>
         <a href="https://www.instagram.com/lost.pryncc/" target="_blank" rel="noreferrer">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-dot" cx="17.5" cy="6.7" r=".8"/></svg>
+          <svg class="social-icon social-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path :d="siInstagram.path" /></svg>
           Instagram <span>lost.pryncc</span><b>↗</b>
         </a>
         <a href="https://steamcommunity.com/id/HaiseKing/" target="_blank" rel="noreferrer">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="16.5" cy="7.5" r="4.2"/><circle cx="16.5" cy="7.5" r="1.7"/><circle cx="7.2" cy="16.8" r="3.2"/><path d="m9.8 15 3.9-4.6M4.3 15.8l-2.1-.9m7.9 3 4.2-2.3"/></svg>
+          <svg class="social-icon social-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path :d="siSteam.path" /></svg>
           Steam <span>HaiseKing</span><b>↗</b>
         </a>
       </section>
