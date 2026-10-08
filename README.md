@@ -1,16 +1,27 @@
-# Prince Kyle Quintos Portfolio
+# Prince Kyle Quintos — Portfolio
 
-A responsive personal portfolio website built with Vue 3, TypeScript, Vite, and Tailwind CSS.
+A personal portfolio for my Computer Engineering coursework, projects, and internship experience. Built with Vue 3, TypeScript, Vite, and Tailwind CSS.
 
 ## Run locally
 
-```bash
+```sh
 npm install
 npm run dev
 ```
 
 ## Build
 
-```bash
+```sh
 npm run build
 ```
+
+## Tech used
+
+- Vue 3 with `<script setup>`
+- TypeScript
+- Tailwind CSS
+- Vite
+
+## GitHub
+
+Repository: [github.com/PrinceKylez/portfolio](https://github.com/PrinceKylez/portfolio)

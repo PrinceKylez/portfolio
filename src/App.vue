@@ -2,167 +2,72 @@
 import { ref } from 'vue'
 
 const showLinks = ref(false)
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 const skills = ['C', 'C++', 'Java', 'Python', 'Django', 'SQL', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'Git & GitHub', 'Basic Electronics']
 
 const projects = [
-  {
-    title: 'Alpha Centauri',
-    description: 'A Django and PostgreSQL project for managing planets, accounts, and roles.',
-    tags: ['Django', 'Python', 'PostgreSQL']
-  },
-  {
-    title: 'Grow A Sanction',
-    description: 'A database-focused system for organizing and managing university sanction records.',
-    tags: ['Database', 'SQL', 'System']
-  },
-  {
-    title: 'Love Scam Awareness',
-    description: 'A research project about digital literacy and awareness of online love scams in the Philippines.',
-    tags: ['Research', 'Awareness']
-  },
-  {
-    title: 'Java GUI Projects',
-    description: 'Simple Java Swing projects made for programming and GUI activities.',
-    tags: ['Java', 'Swing', 'GUI']
-  },
-  {
-    title: 'Electronics Projects',
-    description: 'Basic breadboard and circuit activities for Computer Engineering laboratory work.',
-    tags: ['Electronics', 'Breadboard']
-  }
+  { number: '01', title: 'Alpha Centauri', category: 'WEB APPLICATION', description: 'A Django and PostgreSQL project for managing planets, accounts, and roles.', tags: ['Django', 'Python', 'PostgreSQL'], icon: '✳', tone: 'violet' },
+  { number: '02', title: 'Grow A Sanction', category: 'DATABASE SYSTEM', description: 'A database-focused system for organizing and managing university sanction records.', tags: ['Database', 'SQL', 'System'], icon: '↗', tone: 'lime' },
+  { number: '03', title: 'Love Scam Awareness', category: 'RESEARCH PROJECT', description: 'A research project about digital literacy and awareness of online love scams in the Philippines.', tags: ['Research', 'Awareness'], icon: '♡', tone: 'peach' },
+  { number: '04', title: 'Java GUI Projects', category: 'DESKTOP DEVELOPMENT', description: 'Simple Java Swing projects made for programming and GUI activities.', tags: ['Java', 'Swing', 'GUI'], icon: '▧', tone: 'blue' },
+  { number: '05', title: 'Electronics Projects', category: 'COMPUTER ENGINEERING', description: 'Basic breadboard and circuit activities for Computer Engineering laboratory work.', tags: ['Electronics', 'Breadboard'], icon: '⌁', tone: 'pink' },
 ]
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950 text-gray-200">
-    <header class="border-b-4 border-slate-700 bg-slate-600 px-6 py-10 text-center">
-      <h1 class="text-4xl font-bold text-white sm:text-5xl">Prince Kyle Quintos</h1>
-      <h2 class="mt-2 text-2xl font-bold text-slate-950">BSCpE - 3A</h2>
-      <p class="mt-2 text-sm text-slate-100">Computer Engineering Student • CSU Carig</p>
+  <div class="site-shell min-h-screen antialiased">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Prince Kyle Quintos home"><span class="brand-mark">pk<span>.</span></span><span class="brand-caption">PORTFOLIO / 2026</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a>
+      </nav>
+      <button class="contact-pill" @click="showLinks = true"><span class="status-dot"></span> Let’s talk <span aria-hidden="true">↗</span></button>
     </header>
 
-    <main class="mx-auto grid max-w-5xl gap-6 px-5 py-8 md:grid-cols-2">
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">About Me</h2>
-        <p class="leading-7 text-slate-300">
-          Just a random dude tryna code, survive college, and somehow make things work. 💻
-        </p>
-      </section>
-
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">Skills & Interests</h2>
-        <p class="mb-4 leading-7 text-slate-300">Things I currently learn and work with as a Computer Engineering student.</p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            v-for="skill in skills"
-            :key="skill"
-            class="rounded-md border border-slate-600 bg-slate-700 px-3 py-2 text-xs text-slate-200"
-          >
-            {{ skill }}
-          </span>
+    <main id="home">
+      <section class="hero page-width grid items-center gap-8 md:grid-cols-[1.1fr_.9fr]">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> COMPUTER ENGINEERING · CSU CARIG</div>
+          <h1>Hi, I’m<br /><span>Prince Kyle.</span></h1>
+          <p class="hero-intro">I’m a fourth-year Computer Engineering student. I work on class projects, learn new tools, and try to make each project a little better than the last.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span>↓</span></a><button class="text-link" @click="showLinks = true">Get in touch <span>↗</span></button></div>
         </div>
+        <div class="hero-art">
+          <div class="currently-card"><span class="project-category">A QUICK INTRO</span><h2>Right now</h2><div class="currently-row"><span>Studying</span><b>Computer Engineering</b></div><div class="currently-row"><span>Year</span><b>Fourth year</b></div><div class="currently-row"><span>Working with</span><b>Python · Django · SQL</b></div><div class="currently-row"><span>Also learning</span><b>Vue · TypeScript</b></div><p>Still learning as I go.</p></div>
+        </div>
+        <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
       </section>
 
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg md:col-span-2">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">Resume</h2>
-        <div class="grid gap-5 md:grid-cols-2">
-          <div>
-            <h3 class="text-lg font-bold text-white">Education</h3>
-            <p class="mt-2 text-slate-300">Bachelor of Science in Computer Engineering</p>
-            <p class="text-slate-400">CSU Carig • 3rd Year</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white">What I Work With</h3>
-            <p class="mt-2 text-slate-300">Programming, databases, web development, Git/GitHub, and basic electronics.</p>
+      <section id="work" class="work-section section-pad">
+        <div class="page-width">
+          <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> COURSEWORK & SIDE PROJECTS</p><h2>My <span>projects</span></h2></div><p class="section-aside">Class assignments, research,<br />and practice projects.</p></div>
+          <div class="project-grid">
+            <article v-for="project in projects" :key="project.number" class="project-card" :class="`tone-${project.tone}`">
+              <div class="project-top"><span class="project-number">{{ project.number }} / 05</span><span class="project-icon">{{ project.icon }}</span></div>
+              <div class="project-body"><p class="project-category">{{ project.category }}</p><h3>{{ project.title }}</h3><p class="project-description">{{ project.description }}</p><div class="tag-list"><span v-for="tag in project.tags" :key="tag">{{ tag }}</span></div></div>
+              <div class="project-bottom"><span>PROJECT {{ project.number }}</span></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg md:col-span-2">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">Recent Projects</h2>
-        <div class="grid gap-4 md:grid-cols-3">
-          <article
-            v-for="project in projects.slice(0, 3)"
-            :key="project.title"
-            class="rounded-lg border border-slate-700 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-slate-500"
-          >
-            <h3 class="text-lg font-bold text-white">{{ project.title }}</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-400">{{ project.description }}</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                v-for="tag in project.tags"
-                :key="tag"
-                class="rounded-md bg-slate-700 px-2 py-1 text-xs text-slate-300"
-              >
-                {{ tag }}
-              </span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">Experience</h2>
-        <h3 class="text-lg font-bold text-white">OJT / Internship</h3>
-        <p class="mt-2 text-slate-300">IT Department</p>
-        <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-          <li>Technical support for live selling activities</li>
-          <li>Excel and client information updates</li>
-          <li>Document scanning and printing</li>
-          <li>Basic graphic design and product flyers</li>
-        </ul>
-      </section>
-
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg">
-        <h2 class="mb-4 border-b-2 border-slate-600 pb-2 text-2xl font-bold text-white">Other Projects</h2>
-        <div class="space-y-3">
-          <div v-for="project in projects.slice(3)" :key="project.title" class="rounded-lg bg-slate-900 p-4">
-            <h3 class="font-bold text-white">{{ project.title }}</h3>
-            <p class="mt-1 text-sm text-slate-400">{{ project.description }}</p>
+      <section id="about" class="about-section section-pad">
+        <div class="page-width about-layout">
+          <div class="about-title"><p class="eyebrow"><span class="eyebrow-line"></span> ABOUT</p><h2>A bit<br />about <span>me.</span></h2></div>
+          <div class="about-content"><p class="about-lead">I’m studying Computer Engineering at CSU Carig.</p><p class="about-copy">Most of my experience so far comes from coursework and projects. I’ve worked with web apps, databases, Java GUI assignments, and basic electronics labs. I’m still building my skills and figuring out which parts I enjoy most.</p><div class="education-card"><span class="edu-icon">⌂</span><div><span class="project-category">EDUCATION</span><h3>B.S. Computer Engineering</h3><p>CSU Carig <span>·</span> Fourth year</p></div><span class="edu-date">2023 — NOW</span></div>
+            <div class="skills-wrap"><p class="project-category">TOOLS & TOPICS I’M EXPLORING</p><div class="skill-list"><span v-for="skill in skills" :key="skill">{{ skill }}</span></div></div>
           </div>
         </div>
       </section>
 
-      <section class="rounded-xl border-2 border-slate-700 bg-slate-800 p-6 shadow-lg md:col-span-2">
-        <h2 class="mb-3 text-2xl font-bold text-white">Click Something 👀</h2>
-        <p class="text-slate-300">There might be some things hidden here.</p>
-        <button
-          @click="showLinks = true"
-          class="mt-5 rounded-lg border border-indigo-400 bg-slate-700 px-4 py-3 text-white transition hover:bg-indigo-500"
-        >
-          🔗 My Links
-        </button>
-      </section>
+      <section id="experience" class="experience-section section-pad"><div class="page-width experience-layout"><div><p class="eyebrow"><span class="eyebrow-line"></span> WORK EXPERIENCE</p><h2>Internship<span class="period">.</span></h2></div><div class="experience-card"><div class="experience-date">OJT</div><div><h3>IT Department</h3><p class="experience-sub">Tasks I helped with during my internship.</p><ul><li>Technical support for live selling activities</li><li>Excel and client information updates</li><li>Document scanning and printing</li><li>Basic graphic design and product flyers</li></ul></div></div></div></section>
+
+      <section class="contact-section"><div class="page-width contact-inner"><p class="eyebrow"><span class="eyebrow-line"></span> CONTACT</p><h2>Want to get<br />in touch<span>?</span></h2><button class="button button-light" @click="showLinks = true">My links <span>↗</span></button></div></section>
     </main>
 
-    <footer class="border-t-2 border-slate-800 px-6 py-6 text-center text-xs text-slate-500">
-      <p>© 2026 Prince Kyle Quintos</p>
-      <p class="mt-1">Made with Vue 3, TypeScript & Tailwind CSS</p>
-    </footer>
+    <footer class="footer page-width"><a class="brand" href="#home"><span class="brand-mark">pk<span>.</span></span></a><span>© 2026 Prince Kyle Quintos</span><span>VUE 3 · TAILWIND CSS · TYPESCRIPT</span><button class="back-top" @click="scrollToTop">BACK TO TOP ↑</button></footer>
 
-    <div
-      v-if="showLinks"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-5"
-      @click.self="showLinks = false"
-    >
-      <div class="relative w-full max-w-md rounded-xl border-2 border-indigo-400 bg-slate-800 p-7 shadow-2xl">
-        <button
-          class="absolute right-4 top-2 text-3xl text-slate-400 hover:text-white"
-          @click="showLinks = false"
-        >
-          ×
-        </button>
-        <h2 class="mb-4 text-2xl font-bold text-white">🔗 My Links</h2>
-        <ul class="space-y-3 text-slate-300">
-          <li><a class="text-indigo-300 hover:text-white" href="https://github.com/PrinceKylez" target="_blank">GitHub — PrinceKylez</a></li>
-          <li><a class="text-indigo-300 hover:text-white" href="mailto:kylequintos002@gmail.com">Email — kylequintos002@gmail.com</a></li>
-          <li><a class="text-indigo-300 hover:text-white" href="https://github.com/PrinceKylez/portfolio" target="_blank">Portfolio Repository</a></li>
-          <li><a class="text-indigo-300 hover:text-white" href="https://www.facebook.com/itzur.prxnc/" target="_blank">Facebook — itzur.prxnc</a></li>
-          <li><a class="text-indigo-300 hover:text-white" href="https://www.instagram.com/lost.pryncc/" target="_blank">Instagram — lost.pryncc</a></li>
-          <li><a class="text-indigo-300 hover:text-white" href="https://steamcommunity.com/id/HaiseKing/" target="_blank">Steam — HaiseKing</a></li>
-        </ul>
-      </div>
-    </div>
+    <div v-if="showLinks" class="modal-backdrop" @click.self="showLinks = false" @keydown.esc="showLinks = false"><section class="links-modal" role="dialog" aria-modal="true" aria-labelledby="links-title"><button class="modal-close" aria-label="Close" @click="showLinks = false">×</button><p class="eyebrow"><span class="eyebrow-line"></span> THE INTERNET IS A SMALL PLACE</p><h2 id="links-title">Find me <span>around.</span></h2><p class="modal-intro">Always happy to connect, talk projects, or swap ideas.</p><a href="https://github.com/PrinceKylez" target="_blank" rel="noreferrer">GitHub <span>@PrinceKylez</span><b>↗</b></a><a href="mailto:kylequintos002@gmail.com">Email <span>kylequintos002@gmail.com</span><b>↗</b></a><a href="https://www.facebook.com/itzur.prxnc/" target="_blank" rel="noreferrer">Facebook <span>itzur.prxnc</span><b>↗</b></a><a href="https://www.instagram.com/lost.pryncc/" target="_blank" rel="noreferrer">Instagram <span>lost.pryncc</span><b>↗</b></a><a href="https://steamcommunity.com/id/HaiseKing/" target="_blank" rel="noreferrer">Steam <span>HaiseKing</span><b>↗</b></a></section></div>
   </div>
 </template>
