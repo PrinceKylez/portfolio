@@ -21,3 +21,7 @@
 .brand-logo{display:block;width:auto;height:40px;object-fit:contain}
 @media(max-width:760px){.hero{background-position:57% center;background-image:linear-gradient(90deg,rgba(19,17,20,.92),rgba(19,17,20,.45)),linear-gradient(0deg,#131114 0%,rgba(19,17,20,.2) 18%,rgba(19,17,20,.15) 72%,#131114 100%),url('/rose-background.png')}.hero-art{display:none}}
 .aura-divider{display:flex;justify-content:center;align-items:center;overflow:hidden;background:transparent;padding:10px 20px}.aura-divider img{display:block;width:min(100%,1200px);max-height:270px;height:auto;object-fit:contain}
+.edu-logo{width:44px;height:44px;flex:0 0 44px;object-fit:contain}
+.about-section{position:relative;isolation:isolate;overflow:hidden}.about-background{position:absolute;z-index:-1;top:50%;left:max(calc(4vw + 64px),calc((100vw - 1120px)/2 + 64px));width:min(420px,38vw);height:560px;transform:translateY(-50%);object-fit:cover;object-position:center 35%;opacity:.14;filter:grayscale(1);-webkit-mask-image:radial-gradient(ellipse at center,#000 35%,rgba(0,0,0,.85) 58%,transparent 82%);mask-image:radial-gradient(ellipse at center,#000 35%,rgba(0,0,0,.85) 58%,transparent 82%);pointer-events:none}.about-layout{position:relative}
+@media(max-width:760px){.about-background{left:-5px;width:270px;height:380px;opacity:.09}}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px}

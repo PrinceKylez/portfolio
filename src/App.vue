@@ -58,9 +58,10 @@ const projects = [
       </section>
 
       <section id="about" class="about-section section-pad">
+        <img class="about-background" src="/about-photo.png" alt="" aria-hidden="true" />
         <div class="page-width about-layout">
           <div class="about-title"><p class="eyebrow"><span class="eyebrow-line"></span> ABOUT</p><h2>A bit<br />about <span>me.</span></h2></div>
-          <div class="about-content"><p class="about-lead">I’m studying Computer Engineering at CSU Carig.</p><p class="about-copy">Most of my experience so far comes from coursework and projects. I’ve worked with web apps, databases, Java GUI assignments, and basic electronics labs. I’m still building my skills and figuring out which parts I enjoy most.</p><div class="education-card"><span class="edu-icon">⌂</span><div><span class="project-category">EDUCATION</span><h3>B.S. Computer Engineering</h3><p>CSU Carig <span>·</span> Fourth year</p></div><span class="edu-date">2023 — NOW</span></div>
+          <div class="about-content"><p class="about-lead">I’m studying Computer Engineering at CSU Carig.</p><p class="about-copy">Most of my experience so far comes from coursework and projects. I’ve worked with web apps, databases, Java GUI assignments, and basic electronics labs. I’m still building my skills and figuring out which parts I enjoy most. I’m based in Tuguegarao City, Cagayan.</p><div class="education-card"><img class="edu-logo" src="/csu-logo.png" alt="Cagayan State University logo" /><div><span class="project-category">EDUCATION</span><h3>B.S. Computer Engineering</h3><p>CSU Carig <span>·</span> Fourth year</p></div><span class="edu-date">2023 — NOW</span></div>
             <div class="skills-wrap"><p class="project-category">TOOLS & TOPICS I’M EXPLORING</p><div class="skill-list"><span v-for="skill in skills" :key="skill">{{ skill }}</span></div></div>
           </div>
         </div>
@@ -68,7 +69,7 @@ const projects = [
 
       <section id="experience" class="experience-section section-pad"><div class="page-width experience-layout"><div><p class="eyebrow"><span class="eyebrow-line"></span> WORK EXPERIENCE</p><h2>Internship<span class="period">.</span></h2></div><div class="experience-card"><div class="experience-date">OJT</div><div><h3>IT Department</h3><p class="experience-sub">Tasks I helped with during my internship.</p><ul><li>Technical support for live selling activities</li><li>Excel and client information updates</li><li>Document scanning and printing</li><li>Basic graphic design and product flyers</li></ul></div></div></div></section>
 
-      <section class="contact-section"><div class="page-width contact-inner"><p class="eyebrow"><span class="eyebrow-line"></span> CONTACT</p><h2>Want to get<br />in touch<span>?</span></h2><button class="button button-light" @click="showLinks = true">My links <span>↗</span></button></div></section>
+      <section class="contact-section"><div class="page-width contact-inner"><p class="eyebrow"><span class="eyebrow-line"></span> CONTACT</p><h2>Want to get<br />in touch<span>?</span></h2><div class="contact-actions"><a class="button button-light" href="/Prince-Kyle-Quintos-CV.pdf" download>Download CV <span>↓</span></a><button class="button button-light" @click="showLinks = true">My links <span>↗</span></button></div></div></section>
     </main>
 
     <footer class="footer page-width"><a class="brand" href="#home" aria-label="Back to top"><img class="brand-logo" src="/prince-logo.png" alt="" /></a><span>© 2026 Prince Kyle Quintos</span><span>VUE 3 · TAILWIND CSS · TYPESCRIPT</span><button class="back-top" @click="scrollToTop">BACK TO TOP ↑</button></footer>
